@@ -1,0 +1,45 @@
+{
+    "id": "form1",
+    "schemaVersion": "1.0.0",
+    "name": "Form1",
+    "revision": "1.0",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "chuck_norris_wf",
+            "type": "section",
+            "title": "Chuck Norris Workflow",
+            "content": [
+                {
+                    "id": "gostou_dessa_piada_",
+                    "type": "string",
+                    "label": "Gostou dessa piada? ",
+                    "readOnly": true,
+                    "value": "${context.Joke.value.joke}",
+                    "control": {
+                        "type": "TextArea",
+                        "properties": {
+                            "height": "large"
+                        }
+                    },
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        }
+    ],
+    "decisions": [
+        {
+            "id": "dei_risada",
+            "text": "Dei Risada",
+            "decisionType": "positive"
+        },
+        {
+            "id": "n_o_dei_risada",
+            "text": "Não achei Graça",
+            "decisionType": "negative"
+        }
+    ]
+}
